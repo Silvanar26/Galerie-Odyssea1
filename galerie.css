@@ -79,9 +79,47 @@ h2 {
 
 /* Effets de survol */
 .menu a:hover {
-    transform: scale(1.1); /* Agrandit légèrement le texte */
+    transform: scale(2.2); /* Agrandit légèrement le texte */
 }
 
 .menu a:hover::after {
     width: 100%; /* Souligne le texte */
+}
+.information {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f0; /* Couleur de fond pâle */
+    font-family: "Old Standard TT", serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000;
+}
+
+.information h3 {
+    font-size: 24px;
+    border: 1px solid #000;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.information p {
+    margin: 15px 0;
+}
+
+.expo-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 1px solid #000;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: "Old Standard TT", serif;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.expo-btn:hover {
+    background-color: #000;
+    color: #fff;
 }
