@@ -28,16 +28,16 @@ h2 {
     margin: 0;
 }
 .header-image {
-    width: 100%; /* Occupe toute la largeur de la page */
-    height: 500px; /* Hauteur fixe de 500px, ajuste selon tes besoins */
-    object-fit: cover; /* Remplit l'espace tout en gardant les proportions */
+    width: 100%; 
+    height: 500px; 
+    object-fit: cover; 
     display: block;
     margin: 0 auto;
 }
 /* Menu de navigation */
 .menu {
-    width: 932px; /* Utilise la largeur spécifiée dans Figma */
-    text-align: right; /* Aligne le contenu du menu à droite */
+    width: 932px; 
+    text-align: right; 
     margin-top: 20px;
     margin-left: auto; /* Permet d’aligner le menu à droite */
     color: #000;
@@ -88,7 +88,7 @@ h2 {
 .information {
     text-align: center;
     padding: 20px;
-    background-color: #f9f9f0; /* Couleur de fond pâle */
+    background-color: #f9f9f0; 
     font-family: "Old Standard TT", serif;
     font-size: 18px;
     line-height: 1.6;
