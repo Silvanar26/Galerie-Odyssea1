@@ -38,12 +38,11 @@ h2 {
     display: block;
     margin: 0 auto;
 }
-/* Menu de navigation */
 .menu {
     width: 932px; 
     text-align: right; 
     margin-top: 20px;
-    margin-left: 460px;/* Déplacer le menu vers la gauche de 460px */
+    margin-left: 460px;
     color: #000;
     font-family: "Lora", serif;
     font-size: 30px;
@@ -51,7 +50,6 @@ h2 {
     line-height: normal;
     background-color: #f9f9f0;
 } 
-
 .menu ul {
     list-style: none;
     padding: 0;
