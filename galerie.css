@@ -2,7 +2,8 @@ body {
     font-family: "Old Standard TT";
     margin: 0;
     padding: 0;
-    background-color: #f9f9f0;
+    background-color: #f2f1e3;
+    font-weight: 400; 
 }
 
 header {
@@ -12,7 +13,6 @@ header {
 }
 
 h1 {
-    font-family: "Old Standard TT", serif;
     font-size: 62px;
     font-weight: 400;
     line-height: normal;
@@ -21,7 +21,7 @@ h1 {
 }
 
 h2 {
-    font-family: "Old Standard TT", serif;
+    font-family: "Crimson Text", serif;
     font-size: 62px;
     font-weight: 400;
     text-transform: uppercase;
@@ -36,16 +36,12 @@ h2 {
     margin: 0 auto;
 }
 .menu {
-    width: 932px; 
     text-align: right; 
-    margin-top: 20px;
-    margin-left: 460px;
     color: #000;
     font-family: "Lora", serif;
     font-size: 30px;
     font-weight: 400;
     line-height: normal;
-    background-color: #f9f9f0;
 } 
 
 .menu ul {
@@ -54,6 +50,7 @@ h2 {
     display: flex;
     gap: 50px;
     justify-content: flex-end; /* Aligne les éléments à droite */
+    margin-right: 40px;
 }
 
 .menu li {
@@ -86,27 +83,39 @@ h2 {
 .menu a:hover::after {
     width: 100%; /* Souligne le texte */
 }
-.information {
+section {
     text-align: center;
-    padding: 20px;
-    background-color: #f9f9f0; 
     font-family: "Old Standard TT", serif;
     font-size: 18px;
-    line-height: 1.6;
     color: #000;
 }
 
-.information h3 {
-    font-size: 24px;
+.title {
+    font-size: 50px;
+    font-family: Crimson Text;
+    font-weight: 400; 
+    word-wrap: break-word;
     border: 1px solid #000;
     display: inline-block;
     padding: 10px 20px;
-    margin-bottom: 20px;
 }
 
 .information p {
     margin: 15px 0;
+    font-family: Crimson Text;
+    font-size: 30px;
 }
+
+.exposition .grid-container {
+    grid-template-rows: repeat(1, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.galerie .grid-container{
+    grid-template-rows: repeat(2, 1fr); 
+    grid-template-columns: repeat(3, 1fr)
+}
+
 
 .expo-btn {
     display: inline-block;
@@ -126,18 +135,23 @@ h2 {
 }
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
     justify-content: center;
     max-width: 1200px;
-    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 15px; 
+    box-sizing: border-box;
 }
 
 .grid-item {
     background: transparent;
     text-align: center;
-    padding: 10px;
 }
 
 .grid-item img {
@@ -146,14 +160,21 @@ h2 {
     object-fit: cover;
 }
 
-.grid-item p {
-    font-size: 16px;
-    margin-top: 10px;
+.exposition .grid-item .name {
+        font-size: 40px;
 }
 
-.grid-item span {
-    font-size: 14px;
-    color: #555;
+.exposition .grid-item .place {
+    font-size: 35px;
+    font-family: Crimson Text;
+} 
+
+.grid-item {
+    text-align: left;
+}
+
+.galerie .grid-item {
+    font-size: 35px;
 }
 
 .center-container {
