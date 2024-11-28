@@ -197,3 +197,129 @@ section {
     background-color: #000;
     color: #fff;
 }
+footer {
+    background-color: #e8e4cd; /* Couleur beige */
+    width: 100%; /* Étend le footer sur toute la largeur */
+    margin: 0; /* Supprime les marges externes */
+    padding: 40px 20px; /* Ajoute de l'espace intérieur */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centre verticalement le contenu */
+}
+.footer-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center; /* Centrage vertical */
+    position: relative; /* Nécessaire pour positionner la ligne verticale */
+}
+
+/* Partie gauche (informations) */
+.footer-left {
+    width: 45%; /* Largeur ajustée */
+    text-align: right;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-left p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Icônes sociales */
+.social-media {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end; /* Aligné à droite */
+    gap: 10px;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* Ligne de séparation verticale */
+.footer-divider {
+    background-color: #000;
+    width: 1px;
+    height: 100%; /* Étend la ligne à toute la hauteur du footer */
+    position: absolute;
+    left: 50%; /* Place la ligne au centre du footer */
+    transform: translateX(-50%); /* Centre exactement */
+}
+
+/* Partie droite (newsletter) */
+.footer-right {
+    width: 45%; /* Ajuste la largeur */
+    text-align: left;
+}
+
+.footer-right h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.newsletter-form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-line {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-line input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000; /* Ligne sous le champ */
+    padding: 5px 0;
+    font-size: 14px;
+    outline: none;
+    background: transparent;
+}
+
+.input-line span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s ease;
+}
+
+.input-line input:focus + span,
+.input-line input:hover + span {
+    width: 100%; /* Animation ligne */
+}
+
+.newsletter-form button {
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Alignement à gauche */
+}
+
+.newsletter-form button:hover {
+    background-color: #444;
+}
