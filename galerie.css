@@ -11,12 +11,11 @@ body {
 
 header {
     text-align: center;
-    margin: 0 auto;
     color: #000;
 }
 
 h1 {
-    font-size: 62px;
+    font-size: clamp(24px, 4vw, 42px); /* Font size adjusts between 24px to 42px depending on viewport width */
     font-weight: 400;
     line-height: normal;
     text-transform: capitalize;
@@ -25,35 +24,38 @@ h1 {
 
 h2 {
     font-family: "Crimson Text", serif;
-    font-size: 62px;
+    font-size: clamp(20px, 3vw, 32px); /* Font size adjusts between 20px to 32px depending on viewport width */
     font-weight: 400;
     text-transform: uppercase;
     line-height: normal;
     margin: 0;
 }
+
 .header-image {
     width: 100%; 
     object-fit: cover; 
     display: block;
     margin: 0 auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 5/2;
 }
+
 .menu {
     text-align: right; 
     color: #000;
     font-family: "Lora", serif;
-    font-size: 30px;
+    font-size: clamp(18px, 2.5vw, 30px); /* Font size adjusts between 18px to 30px depending on viewport width */
     font-weight: 400;
     line-height: normal;
 } 
 
 .menu ul {
     list-style: none;
-    padding: 0;
+    padding: 15px;
     display: flex;
-    gap: 50px;
-    justify-content: flex-end; /* Aligne les éléments à droite */
-    margin-right: 40px;
+    gap: 50px; /* Reduced gap for smaller screens */
+    justify-content:end; /* Center for better scaling */
+    flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+    margin: 15px;
 }
 
 .menu li {
@@ -86,15 +88,16 @@ h2 {
 .menu a:hover::after {
     width: 100%; /* Souligne le texte */
 }
+
 section {
     text-align: center;
     font-family: "Old Standard TT", serif;
-    font-size: 18px;
+    font-size: clamp(16px, 2vw, 18px); /* Font size adjusts between 16px to 18px depending on viewport width */
     color: #000;
 }
 
 .title {
-    font-size: 50px;
+    font-size: clamp(20px, 3vw, 28px); /* Font size adjusts between 20px to 28px depending on viewport width */
     font-family: Crimson Text;
     font-weight: 400; 
     word-wrap: break-word;
@@ -106,24 +109,21 @@ section {
 .information p {
     margin: 15px 0;
     font-family: Crimson Text;
-    font-size: 30px;
+    font-size: clamp(16px, 2.5vw, 24px); /* Font size adjusts between 16px to 24px depending on viewport width */
 }
 
 .exposition .grid-container {
-    grid-template-rows: repeat(1, 1fr); 
     grid-template-columns: repeat(4, 1fr);
 }
 
 .galerie .grid-container{
-    grid-template-rows: repeat(2, 1fr); 
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(3, 1fr);
 }
-
 
 .expo-btn {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 20px); /* Font size adjusts between 16px to 20px depending on viewport width */
     border: 1px solid #000;
     background-color: transparent;
     cursor: pointer;
@@ -136,6 +136,7 @@ section {
     background-color: #000;
     color: #fff;
 }
+
 .grid-container {
     display: grid;
     gap: 20px;
@@ -164,20 +165,16 @@ section {
 }
 
 .exposition .grid-item .name {
-        font-size: 40px;
+    font-size: clamp(20px, 3vw, 28px); /* Font size adjusts between 20px to 28px depending on viewport width */
 }
 
 .exposition .grid-item .place {
-    font-size: 35px;
+    font-size: clamp(16px, 2.5vw, 24px); /* Font size adjusts between 16px to 24px depending on viewport width */
     font-family: Crimson Text;
 } 
 
-.grid-item {
-    text-align: left;
-}
-
 .galerie .grid-item {
-    font-size: 35px;
+    font-size: clamp(16px, 2.5vw, 24px); /* Font size adjusts between 16px to 24px depending on viewport width */
 }
 
 .center-container {
@@ -188,7 +185,7 @@ section {
 .galerie-btn {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 20px); /* Font size adjusts between 16px to 20px depending on viewport width */
     border: 1px solid  #000;
     background-color: transparent;
     cursor: pointer;
@@ -200,6 +197,7 @@ section {
     background-color: #000;
     color: #fff;
 }
+
 footer {
     background-color: #e8e4cd; /* Couleur beige */
     margin: 0; /* Supprime les marges externes */
@@ -224,13 +222,13 @@ footer {
 }
 
 .footer-title {
-    font-size: 18px;
+    font-size: clamp(14px, 2vw, 18px); /* Font size adjusts between 14px to 18px depending on viewport width */
     font-weight: bold;
     margin-bottom: 15px;
 }
 
 .footer-left p {
-    font-size: 16px;
+    font-size: clamp(12px, 1.8vw, 16px); /* Font size adjusts between 12px to 16px depending on viewport width */
     margin: 5px 0;
 }
 
@@ -271,12 +269,12 @@ footer {
 }
 
 .footer-right h3 {
-    font-size: 18px;
+    font-size: clamp(14px, 2vw, 18px); /* Font size adjusts between 14px to 18px depending on viewport width */
     margin-bottom: 15px;
 }
 
 .newsletter-form label {
-    font-size: 14px;
+    font-size: clamp(12px, 1.5vw, 14px); /* Font size adjusts between 12px to 14px depending on viewport width */
     margin-bottom: 5px;
     display: block;
 }
@@ -288,10 +286,11 @@ footer {
 
 .input-line input {
     width: 100%;
+    max-width: 300px; /* Limit width to improve appearance on small screens */
     border: none;
     border-bottom: 1px solid #000; /* Ligne sous le champ */
     padding: 5px 0;
-    font-size: 14px;
+    font-size: clamp(12px, 1.8vw, 14px); /* Font size adjusts between 12px to 14px depending on viewport width */
     outline: none;
     background: transparent;
 }
@@ -315,7 +314,7 @@ footer {
     padding: 10px;
     background-color: #000;
     color: #fff;
-    font-size: 14px;
+    font-size: clamp(12px, 1.8vw, 14px); /* Font size adjusts between 12px to 14px depending on viewport width */
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -326,8 +325,65 @@ footer {
     background-color: #444;
 }
 
-
 .social-media img {
     width: 33px;
     height: 33px;
+}
+.subscribe-button{
+    display: none;
+}
+
+/* Media Queries for Improved Responsiveness */
+@media (max-width: 768px) {
+    .exposition .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .galerie .grid-container{
+        grid-template-columns: repeat(2, 1fr)
+    }
+    
+    .subscribe-button{
+        display: block;
+    }
+    h1 {
+        font-size: clamp(24px, 4vw, 32px); /* Further reduce size for tablets */
+    }
+
+    h2 {
+        font-size: clamp(20px, 3vw, 28px); /* Further reduce size for tablets */
+    }
+
+    .menu ul {
+        gap: 30px; /* Reduce gap for better fitting on small screens */
+    }
+
+    .grid-container{
+        padding: 0;
+    }
+
+    .newsletter-form button {
+        width: 100%; /* Full-width button for better interaction */
+        max-width: 200px; /* Limit max width */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Ensure footer stacks vertically on smaller screens */
+        align-items: center;
+    }
+    .footer-left{
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-right {
+        display: none;
+    }
+
+    .footer-divider{
+        display: none;
+    }
+    .social-media{
+        justify-content: center;
+    }
 }
