@@ -4,6 +4,9 @@ body {
     padding: 0;
     background-color: #f2f1e3;
     font-weight: 400; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -30,10 +33,10 @@ h2 {
 }
 .header-image {
     width: 100%; 
-    height: 500px; 
     object-fit: cover; 
     display: block;
     margin: 0 auto;
+    aspect-ratio: 16 / 9;
 }
 .menu {
     text-align: right; 
@@ -199,9 +202,8 @@ section {
 }
 footer {
     background-color: #e8e4cd; /* Couleur beige */
-    width: 100%; /* Étend le footer sur toute la largeur */
     margin: 0; /* Supprime les marges externes */
-    padding: 40px 20px; /* Ajoute de l'espace intérieur */
+    padding: 25px 100px; /* Ajoute de l'espace intérieur */
     display: flex;
     justify-content: center;
     align-items: center; /* Centre verticalement le contenu */
@@ -322,4 +324,10 @@ footer {
 
 .newsletter-form button:hover {
     background-color: #444;
+}
+
+
+.social-media img {
+    width: 33px;
+    height: 33px;
 }
