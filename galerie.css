@@ -359,7 +359,16 @@ form.newsletter-form button::after {
         width: 100%; /* Full-width button for better interaction */
         max-width: 200px; /* Limit max width */
     }
-
+    .newsletter-title {
+        display: block; /* Affiche uniquement le titre */
+        font-size: 1.5rem; /* Ajuste la taille pour mobile */
+        font-weight: normal; /* Retire le gras */
+        text-align: center; /* Centre le texte */
+        margin-top: 20px; /* Ajoute un espace au-dessus */
+    }
+    .newsletter-form {
+        display: none; /* Cache le formulaire complet */
+    }
     .footer-container {
         flex-direction: column; /* Ensure footer stacks vertically on smaller screens */
         align-items: center;
@@ -370,8 +379,9 @@ form.newsletter-form button::after {
     }
 
     .footer-right {
-        display: none;
-    }
+    display: none; 
+    text-align: center;
+}
 
     .footer-divider{
         display: none;
@@ -379,4 +389,5 @@ form.newsletter-form button::after {
     .social-media{
         justify-content: center;
     }
+    
 }
