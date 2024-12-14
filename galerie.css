@@ -203,25 +203,25 @@ section {
 }
 
 footer {
-    background-color: #e8e4cd; /* Couleur beige */
-    margin: 0; /* Supprime les marges externes */
-    padding: 25px 100px; /* Ajoute de l'espace intérieur */
+    background-color: #e8e4cd; 
+    margin: 0; 
+    padding: 25px 100px; 
     display: flex;
     justify-content: center;
-    align-items: center; /* Centre verticalement le contenu */
+    align-items: center; 
 }
 .footer-container {
     display: flex;
     max-width: 1200px;
     width: 100%;
     justify-content: space-between;
-    align-items: center; /* Centrage vertical */
-    position: relative; /* Nécessaire pour positionner la ligne verticale */
+    align-items: center; 
+    position: relative; /
 }
 
 /* Partie gauche (informations) */
 .footer-left {
-    width: 45%; /* Largeur ajustée */
+    width: 45%; 
     text-align: right;
 }
 
@@ -232,7 +232,7 @@ footer {
 }
 
 .footer-left p {
-    font-size: clamp(12px, 1.8vw, 16px); /* Font size adjusts between 12px to 16px depending on viewport width */
+    font-size: clamp(12px, 1.8vw, 16px); 
     margin: 5px 0;
 }
 
@@ -240,7 +240,7 @@ footer {
 .social-media {
     margin-top: 15px;
     display: flex;
-    justify-content: flex-end; /* Aligné à droite */
+    justify-content: flex-end; 
     gap: 10px;
 }
 
@@ -256,92 +256,76 @@ footer {
     opacity: 1;
 }
 
-/* Ligne de séparation verticale */
 .footer-divider {
     background-color: #000;
     width: 1px;
-    height: 100%; /* Étend la ligne à toute la hauteur du footer */
+    height: 100%; 
     position: absolute;
-    left: 50%; /* Place la ligne au centre du footer */
-    transform: translateX(-50%); /* Centre exactement */
+    left: 50%; 
+    transform: translateX(-50%); 
 }
 
 /* Partie droite (newsletter) */
 .footer-right {
-    width: 45%; /* Ajuste la largeur */
+    width: 45%; 
     text-align: left;
 }
 
 .footer-right h3 {
-    font-size: clamp(14px, 2vw, 18px); /* Font size adjusts between 14px to 18px depending on viewport width */
+    font-size: clamp(14px, 2vw, 18px); 
     margin-bottom: 15px;
 }
+.newsletter-form {
+    flex: 1;
+    max-width: 100%; /* Ensure the form is responsive */
+    padding-left: 0; /* Remove padding for smaller screens */
+    border-left: none; /* Remove border for smaller screens */
+}
 
-.newsletter-form label {
-    font-size: clamp(12px, 1.5vw, 14px); /* Font size adjusts between 12px to 14px depending on viewport width */
-    margin-bottom: 5px;
+form.newsletter-form input[type="text"],
+form.newsletter-form input[type="email"] {
     display: block;
-    color: #b0b0b0;
-    font-family: "Old Standard TT", serif;
-}
-
-.input-line {
-    position: relative;
-    margin-bottom: 15px;
-}
-
-.input-line input {
     width: 100%;
-    max-width: 300px; /* Limit width to improve appearance on small screens */
     border: none;
-    border-bottom: 1px solid #000; /* Ligne sous le champ */
-    padding: 5px 0;
-    font-size: clamp(12px, 1.8vw, 14px); /* Font size adjusts between 12px to 14px depending on viewport width */
-    outline: none;
+    border-bottom: 1px solid #B0B0B0;
     background: transparent;
+    margin-bottom: 15px;
+    padding: 5px 0;
+    font-size: 1rem;
+    color: #4a4a4a;
+    outline: none;
+    max-width: 300px; 
 }
 
-.input-line span {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #000;
-    transition: width 0.3s ease;
+form.newsletter-form input::placeholder {
+    color: #B0B0B0;
 }
 
-.input-line input:focus + span,
-.input-line input:hover + span {
-    width: 100%; /* Animation ligne */
+form.newsletter-form button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #969494;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
 }
 
-.newsletter-form button {
-    background: none; 
-    border: none; 
-    padding: 0; 
-    color: #b0b0b0; 
-    font-size: clamp(16px, 2vw, 20px); /* Ajuste la taille du texte selon la largeur de l'écran */
-    font-family: "Old Standard TT", serif; 
-    cursor: pointer; 
-    text-align: left; 
-    transition: transform 0.2s ease; 
+form.newsletter-form button:hover {
+    color: #000;
 }
 
-.newsletter-form button:hover {
-    transform: scale(1.05); /* Agrandit légèrement au survol */
-    color: #444; /* Change légèrement la couleur au survol */
+form.newsletter-form button::after {
+    content: '→'; 
+    margin-left: 8px;
+    font-size: 1rem;
 }
-
-.social-media img {
-    width: 33px;
-    height: 33px;
+.newsletter-title {
+    font-weight: normal; 
+    margin-left: 1cm;
 }
-.subscribe-button{
-    display: none;
-    font-weight: normal !important;
-}
-
 /* Media Queries for Improved Responsiveness */
 @media (max-width: 768px) {
     .exposition .grid-container {
