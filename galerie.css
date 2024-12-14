@@ -296,7 +296,10 @@ form.newsletter-form input[type="email"] {
     outline: none;
     max-width: 300px; 
 }
-
+.newsletter-title {
+    font-weight: normal; 
+    margin-left: 1cm;
+}
 form.newsletter-form input::placeholder {
     color: #B0B0B0;
 }
@@ -321,10 +324,6 @@ form.newsletter-form button::after {
     content: '→'; 
     margin-left: 8px;
     font-size: 1rem;
-}
-.newsletter-title {
-    font-weight: normal; 
-    margin-left: 1cm;
 }
 /* Media Queries for Improved Responsiveness */
 @media (max-width: 768px) {
@@ -359,6 +358,10 @@ form.newsletter-form button::after {
         width: 100%; /* Full-width button for better interaction */
         max-width: 200px; /* Limit max width */
     }
+    .newsletter-form {
+
+            display: none;
+  }
 
     .footer-container {
         flex-direction: column; /* Ensure footer stacks vertically on smaller screens */
@@ -379,3 +382,4 @@ form.newsletter-form button::after {
     .social-media{
         justify-content: center;
     }
+}
